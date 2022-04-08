@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+mount -o rw,noatime,compress=zstd:3,space_cache=v2,commit=120,subvol=@           /dev/nvme0n1p2 /mnt
+mount -o rw,noatime,compress=zstd:3,space_cache=v2,commit=120,subvol=@.snapshots /dev/nvme0n1p2 /mnt/.snapshots
+mount -o rw,noatime,compress=zstd:3,space_cache=v2,commit=120,subvol=@home       /dev/nvme0n1p2 /mnt/home
+mount -o rw,noatime,compress=zstd:3,space_cache=v2,commit=120,subvol=@opt /dev/nvme0n1p2 /mnt/opt
+mount -o rw,noatime,compress=zstd:3,space_cache=v2,commit=120,subvol=@tmp /dev/nvme0n1p2 /mnt/tmp
+mount -o rw,noatime,compress=zstd:3,space_cache=v2,commit=120,subvol=@var /dev/nvme0n1p2 /mnt/var
+
+exit 0
